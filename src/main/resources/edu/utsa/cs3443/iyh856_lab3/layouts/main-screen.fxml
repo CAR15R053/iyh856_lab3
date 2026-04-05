@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -15,8 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.iyh856_lab3.MainScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.iyh856_lab3.MainScreenController">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
@@ -30,7 +30,7 @@
             </ImageView>
             <Label fx:id="titleText" alignment="TOP_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" text="The Global Emergency Response Organization" textAlignment="CENTER" textFill="#1f68a8">
                <font>
-                  <Font name="Calibri" size="15.0" />
+                  <Font name="Calibri" size="20.0" />
                </font>
                <opaqueInsets>
                   <Insets />
@@ -52,11 +52,11 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="listShipButton" mnemonicParsing="false" onAction="#handleListShips" text="List Ships" textAlignment="CENTER" textFill="#1f68a8">
+            <Button fx:id="listShipButton" mnemonicParsing="false" onAction="#printShipList" text="List Ships" textAlignment="CENTER" textFill="#1f68a8">
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
                <VBox.margin>
                   <Insets left="10.0" top="10.0" />
@@ -72,12 +72,12 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
             </Label>
             <TextField fx:id="enterRegistrationNumberText" promptText="Enter Number">
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
@@ -85,42 +85,48 @@
             </TextField>
             <RadioButton fx:id="findButton" mnemonicParsing="false" text="Find" textFill="#1f68a8">
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
                <VBox.margin>
                   <Insets left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="action" />
+               </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="deleteButton" mnemonicParsing="false" text="Delete" textFill="#1f68a8">
+            <RadioButton fx:id="deleteButton" mnemonicParsing="false" text="Delete" textFill="#1f68a8" toggleGroup="$action">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
             </RadioButton>
-            <Button fx:id="goButton" mnemonicParsing="false" onAction="#handleGo" text="Go!" textFill="#1f68a8">
+            <Button fx:id="goButton" mnemonicParsing="false" onAction="#pressGo" text="Go!" textFill="#1f68a8">
                <font>
-                  <Font size="8.0" />
+                  <Font size="12.0" />
                </font>
                <VBox.margin>
-                  <Insets left="70.0" top="50.0" />
+                  <Insets left="150.0" top="50.0" />
                </VBox.margin>
             </Button>
          </children>
       </VBox>
    </left>
    <center>
-      <TextArea id="outputText" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" BorderPane.alignment="CENTER">
+      <TextArea fx:id="outputText" editable="false" prefHeight="400.0" prefWidth="600.0" wrapText="false" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets right="10.0" />
          </BorderPane.margin>
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font>
       </TextArea>
    </center>
    <bottom>
       <Label text="Property of Caris Schultz" BorderPane.alignment="CENTER">
          <font>
-            <Font size="6.0" />
+            <Font size="8.0" />
          </font>
       </Label>
    </bottom>

@@ -31,7 +31,7 @@ public class AidShipManager {
      */
     public void loadAidShips(){
         try {
-            String fname = "data.csv";
+            String fname = "data/aid_Ships.csv";
             File f = new File(fname);
             Scanner s = new Scanner(f);
 
@@ -240,4 +240,3 @@ public class AidShipManager {
         this.aidShips = aidShip;
     }
 }
-
