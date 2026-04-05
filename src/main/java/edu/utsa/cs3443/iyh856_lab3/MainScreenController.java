@@ -130,4 +130,20 @@ public class MainScreenController {
 
         return output;
     }
+
+    /**
+     * return aidshipmanager name
+     * @return aidshipmanager name
+     */
+    public AidShipManager getAidShipManager(){
+        return m;
+    }
+
+    /**
+     * sets aidshipmanager
+     * @param m aidshipmanager name
+     */
+    public void setAidShipManager(AidShipManager m){
+        this.m = m;
+    }
 }
