@@ -104,12 +104,12 @@ public class MainScreenController {
     }
 
     /**
-     * correctly prints and organizes aidShip's toString information
+     * correctly prints and organizes aidShip's toString information for findShip above
      * @param s aidShip name
      * @return aidShip toString
      */
     @FXML
-    private String printFindShip(AidShip s) {
+    public String printFindShip(AidShip s) {
         String output ="Aid Ship Card Found:\n";
         output += "---------------------------------------\n";
         output += String.format("%-22s %s%n","Name:",s.getName()) + String.format("%-22s %s%n", "Registration Number:", s.getRegistrationNumber())
