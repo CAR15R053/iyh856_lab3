@@ -1,6 +1,6 @@
-package edu.utsa.cs3443.iyh856_lab3.model;
+package edu.utsa.cs3443.iyh856_lab4.model;
 
-public abstract class Ship implements Navigable{
+public abstract class Ship implements Navigable {
     //Attributes for Ship Class
     private String name;
     private String regNum;

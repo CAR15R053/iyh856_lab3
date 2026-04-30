@@ -1,6 +1,6 @@
-package edu.utsa.cs3443.iyh856_lab3.model;
+package edu.utsa.cs3443.iyh856_lab4.model;
 
-public class AidShip extends Ship implements EmergencySupport{
+public class AidShip extends Ship implements EmergencySupport {
     //Attributes for AidShip
     private String aidType;
     private int suppliesOnBoard;

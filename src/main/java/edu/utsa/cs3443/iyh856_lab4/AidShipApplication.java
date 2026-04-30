@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.iyh856_lab3;
+package edu.utsa.cs3443.iyh856_lab4;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +14,11 @@ public class AidShipApplication extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AidShipApplication.class.getResource("layouts/main-screen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),1000,800);
-        stage.setTitle("The Global Emergency Response Organization");
+        FXMLLoader fxmlLoader = new FXMLLoader(AidShipApplication.class.getResource("layouts/login-screen.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),600,277);
+        LoginScreenController con = fxmlLoader.getController();
+        con.setStage(stage);
+        stage.setTitle("GERO Login");
         stage.setScene(scene);
         stage.show();
     }

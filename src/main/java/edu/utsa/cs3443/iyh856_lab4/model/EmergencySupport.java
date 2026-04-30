@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.iyh856_lab3.model;
+package edu.utsa.cs3443.iyh856_lab4.model;
 
 public interface EmergencySupport {
 
